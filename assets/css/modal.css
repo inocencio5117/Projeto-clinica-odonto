@@ -1,0 +1,88 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all ease-in-out 250ms;
+    background-color: #fff;
+    width: 425px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    z-index: 10;
+}
+.modal.active {
+    transform:  translate(-50%, -50%) scale(1);
+}
+.modal-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+    margin: 0px 5px  40px 0px;
+}
+.modal-head {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.modal-body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px  15px 0px 15px;
+    border-top: 1px solid;
+}
+#nome,
+#email,
+#telefone,
+#mensagem {
+    width: 100%;
+    padding: 8px;
+    margin: 7px 0px;
+    border: 1px solid rgba(129, 129, 129, .9);
+    border-radius: 5px;
+}
+#mensagem {
+    resize: vertical;
+}
+.send-form {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: #fff;
+    transition: all ease-in-out 300ms;
+}
+.send-form:hover {
+    background-color: #fff;
+    color: cadetblue;
+    border: .5px solid cadetblue;
+}
+.overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out 250ms;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

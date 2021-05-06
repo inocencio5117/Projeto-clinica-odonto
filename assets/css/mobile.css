@@ -1,0 +1,274 @@
+@media screen and (max-width: 1140px) {
+    img {
+        height: 250px;
+        width: 280px;
+    }
+
+    .sec1,
+    .sec2,
+    .sec3,
+    .sec4 {
+        width: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #inicio {
+        background-position: right;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+        padding: 0.625rem;
+        text-align: center;
+    }
+
+    #saiba {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .sec1,
+    .sec3 {
+        margin: auto;
+        padding-left: 0px;
+    }
+
+    .dif-head {
+        margin-bottom: 5rem;
+    }
+
+    #diferenciais {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .dif1,
+    .dif3 {
+        margin: auto;
+    }
+    .dif1,
+    .dif2,
+    .dif3,
+    .dif4 {
+        width: auto;
+    }
+
+    #space h1 {
+        height: auto;
+        font-size: 1.75rem;
+    }
+
+    .sobre-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-box div img {
+        height: 250px;
+        width: 300px;
+    }
+
+    .floating-msg {
+        display: none;
+        pointer-events: none;
+    }
+
+    .foot {
+        background-color: var(--sec-color);
+        height: auto;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.15rem;
+        color: #fff;
+    }
+
+    .foot>div {
+        margin: 1.5625rem 0px;
+    }
+
+    .ft-head>p,
+    .ft-encontre {
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+
+    /* modal */
+    .modal {
+        width: 325px;
+    }
+
+
+
+    /* hamburguer menu */
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-wrap .toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .menu-wrap .hamburguer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        background: var(--sec-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* hamburguer line */
+    .menu-wrap .toggler {
+        visibility: visible;
+    }
+
+    .menu-wrap .hamburguer>div {
+        position: relative;
+        width: 100%;
+        height: 3.5px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 400ms ease;
+    }
+
+    /* top and bottom lines */
+    .menu-wrap .hamburguer>div::before,
+    .menu-wrap .hamburguer>div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 3.5px;
+        background: inherit;
+    }
+
+    /* moves line down */
+    .menu-wrap .hamburguer>div::after {
+        top: 10px;
+    }
+
+    /* toggler animate */
+    .menu-wrap .toggler:checked+.hamburguer>div {
+        transform: rotate(135deg);
+    }
+
+    /* turn lines into X */
+    .menu-wrap .toggler:checked+.hamburguer>div::before,
+    .menu-wrap .toggler:checked+.hamburguer>div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* rotate on hover when checked */
+    .menu-wrap .toggler:checked:hover+.hamburguer>div {
+        transform: rotate(225deg);
+    }
+
+
+
+
+    /* show menu */
+    .header #menu.show {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(80, 80, 80, 0.75);
+        height: 100vh;
+    }
+
+    .menu-wrap .toggler:checked~.menu {
+        visibility: visible;
+    }
+
+    .menu-wrap .toggler:checked~.menu>div {
+        transform: scaleY(1);
+        transition-duration: 450ms;
+    }
+
+    .menu-wrap .toggler:checked~.menu>div>div {
+        opacity: 1;
+        transition: all 400ms ease;
+    }
+
+    .menu-wrap .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-wrap .menu>div {
+        background: rgba(80, 80, 80, 0.75);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scaleY(0);
+        transition: all 400ms ease;
+    }
+
+    .menu-wrap .menu>div>div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: all 400ms ease;
+    }
+
+    .menu-wrap .menu>div>div>ul>li {
+        list-style: none;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu-wrap .menu>div>div>ul>li>a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 400ms ease;
+        cursor: pointer;
+        font-weight: 700;
+    }
+}
